@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blackColor"
+    tools:context=".main.MainActivity">
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:padding="3dp"
+        android:text="@string/title_txt"
+        android:textColor="@color/whiteColor"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/baseValueTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:text="@string/bseValueTextView"
+        android:textColor="@color/whiteColor"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="@id/titleTextView"
+        app:layout_constraintRight_toRightOf="@id/titleTextView"
+        app:layout_constraintTop_toBottomOf="@id/titleTextView" />
+
+
+    <TextView
+        android:id="@+id/dateTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:textColor="@color/whiteColor"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="@id/baseValueTextView"
+        app:layout_constraintRight_toRightOf="@id/baseValueTextView"
+        app:layout_constraintTop_toBottomOf="@id/baseValueTextView" />
+
+
+    <EditText
+        android:id="@+id/fromAmountEditText"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="184dp"
+        android:gravity="center"
+        android:hint="@string/amount_txt"
+        android:inputType="numberDecimal"
+        android:textColor="@color/whiteColor"
+        android:textColorHint="@color/whiteColor"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.876"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleTextView" />
+
+    <TextView
+        android:id="@+id/toAmountTextView"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:hint="@string/converted_txt"
+        android:inputType="numberDecimal"
+        android:textColor="@color/whiteColor"
+        android:textColorHint="@color/whiteColor"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.876"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fromAmountEditText" />
+
+    <Spinner
+        android:id="@+id/fromSpinner"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="65dp"
+        android:layout_marginRight="65dp"
+        android:background="@color/whiteColor"
+        app:layout_constraintBottom_toBottomOf="@+id/fromAmountEditText"
+        app:layout_constraintEnd_toStartOf="@+id/fromAmountEditText"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/fromAmountEditText" />
+
+    <Spinner
+        android:id="@+id/toSpinner"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/whiteColor"
+        app:layout_constraintBottom_toBottomOf="@+id/toAmountTextView"
+        app:layout_constraintEnd_toStartOf="@+id/toAmountTextView"
+        app:layout_constraintHorizontal_bias="0.434"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fromSpinner" />
+
+    <Button
+        android:id="@+id/convertButton"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="@string/convert_btn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toAmountTextView" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/convertButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toAmountTextView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
